@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <title>Calculadora de Permisos Octales</title>
+</head>
+<body>
+    <form>
+        <div class="row">
+            <label for="permisos">Ingresa en sistema octal los permisos</label>
+            <input type="text" id="permisos" maxlength="3" oninput="CalcularPermisos()">
+            
+            <div class="col-sm-12">
+                <label for="p_usuarios">Permiso en usuarios</label>
+                <select name="p_usuarios" id="p_usuarios" onchange="ActualizarInputDesdeSelects()">
+                    <option value="0">0 - No hay permisos</option>
+                    <option value="1">1 - Ejecución</option>
+                    <option value="2">2 - Escritura</option>
+                    <option value="3">3 - Escritura y ejecución</option>
+                    <option value="4">4 - Lectura</option>
+                    <option value="5">5 - Lectura y ejecución</option>
+                    <option value="6">6 - Lectura y escritura</option>
+                    <option value="7">7 - Todos (rwx)</option>
+                </select>
+            </div>
+
+            <div class="col-sm-12">
+                <label for="p_grupo">Permiso en grupos</label>
+                <select name="p_grupo" id="p_grupo" onchange="ActualizarInputDesdeSelects()">
+                    <option value="0">0 - No hay permisos</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+
+            <div class="col-sm-12">
+                <label for="p_otros">Permiso en otros</label>
+                <select name="p_otros" id="p_otros" onchange="ActualizarInputDesdeSelects()">
+                    <option value="0">0 - No hay permisos</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="CalcularPermisos()">Calcular</button>
+        </div>
+    </form>
+    <script src="JS/main.js"></script>   
+</body>
+</html>
