@@ -15,7 +15,7 @@ function CalcularPermisos() {
             document.getElementById('p_grupo').value = grupo;
             document.getElementById('p_otros').value = otros;
         } else {
-            alert("Los dígitos deben estar entre 0 y 7.");
+            alert("Los digitos deben estar entre 0 y 7");
             inputPermisos.value = "";
         }
     }
